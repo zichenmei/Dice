@@ -1,4 +1,4 @@
-Die one;
+  Die one;
 int total=0;
 
 void setup(){
