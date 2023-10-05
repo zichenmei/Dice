@@ -1,4 +1,4 @@
-  Die one;
+Die one;
 int total=0;
 
 void setup(){
@@ -7,7 +7,6 @@ void setup(){
 }
 
 void draw() {
-  //your code here
   background(255);
   for (int y=0; y<350; y+=50) {
     for (int x=-50; x<400; x+=50) {
