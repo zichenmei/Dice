@@ -47,7 +47,7 @@ class Die {//models one single dice cube
   }
 
   void show() {
-    rect(myX, myY,10,10);
+    rect(myX, myY,50,50);
     if (dots==1) {
       fill(0);
       ellipse(myX+25, myY+25, 10, 10);
