@@ -7,10 +7,11 @@ void setup(){
 }
 
 void draw() {
+  //your code here
   background(255);
   for (int y=0; y<350; y+=50) {
-    for (int x=-50; x<400; x+=50) {
-      Die one= new Die(x, y);
+    for (int x=0; x<400; x+=50) {
+      one= new Die(x, y);
       one.roll();
       one.show();
     }
@@ -25,28 +26,28 @@ void draw() {
 
 void mousePressed() {
   total=0;
+  noFill();
   redraw();
 }
 
 class Die {//models one single dice cube
 
-  int myX, myY,sum, dots;
+  int myX, myY,dots;
 
   Die(int x, int y) { //constructor
     myX=x;
     myY=y;
-    sum=0;
   }
 
   void roll() {
     dots=(int)((Math.random()*6)+1);
     total=total+dots;
-    sum=dots*sum;
+    //sum=dots*sum;
     
   }
 
   void show() {
-    rect(myX, myY, 50,50);
+    square(myX, myY, 50);
     if (dots==1) {
       fill(0);
       ellipse(myX+25, myY+25, 10, 10);
